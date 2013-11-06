@@ -8,6 +8,8 @@ Bundler.require(:default, Rails.env)
 
 module Reelsports
   class Application < Rails::Application
+
+    config.assets.initialize_on_precompile = false
     
     config.to_prepare do
       # Load application's model / class decorators
