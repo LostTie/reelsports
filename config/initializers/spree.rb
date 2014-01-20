@@ -11,6 +11,7 @@ Spree.config do |config|
   # config.site_name = "Spree Demo Site"
   config.site_name = 'Reel Sportswear'
   config.logo = 'store/logo.png'
+  config.admin_interface_logo = 'store/logo.png'
 end
 
 Spree.user_class = "Spree::LegacyUser"
