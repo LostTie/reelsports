@@ -101,3 +101,61 @@ table tbody tr.odd {
 .pagination {
   display: none;
 }
+
+#shipping_method {
+  border: 1px solid black;
+}
+
+#shipping_method .stock-location {
+  background: black;
+  color: #77c17e;
+}
+
+#shipping_method table.stock-contents thead {
+  background: black;
+}
+
+#shipping_method .stock-shipping-method-title {
+  background-color: black;
+}
+
+#checkout-summary {
+  border: 1px solid black;
+}
+
+#checkout-summary h3 {
+  border-bottom: 1px solid black;
+}
+
+#order_details {
+  border: 1px solid black;
+}
+
+hr {
+  border-bottom: 1px solid black;
+}
+
+#order_details .steps-data h6 {
+  border-bottom: 1px solid black;
+}
+
+#order_details table tfoot#order-total tr {
+  border-top: 1px solid black;
+}
+
+.progress-steps li.current {
+  background: #77c17e;
+  border-bottom: 5px solid #5E9964;
+}
+
+.progress-steps li.completed {
+  background: #77c17e;
+}
+
+.progress-steps li.completed-first {
+  background: #77c17e;
+}
+
+.errorExplanation {
+  background: #a22929
+}
