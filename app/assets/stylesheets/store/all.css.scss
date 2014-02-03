@@ -85,3 +85,15 @@ nav #main-nav-bar li#link-to-cart {
   padding-left: 0px;
   background: none;
 }
+
+table tbody tr.odd {
+  background: black;
+}
+
+#product-properties {
+  border: 1px solid black;
+}
+
+#product-description .product-title {
+  border-bottom: 1px solid black;
+}
