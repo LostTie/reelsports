@@ -61,3 +61,22 @@ nav #main-nav-bar {
     }
   }
 }
+table thead {
+  background-color: black;
+}
+
+table tbody tr {
+  border-bottom: 1px solid black;
+}
+
+table tbody tr.alt {
+  background-color: black;
+}
+
+footer#footer {
+  border-top: 1px solid black;
+}
+
+ul#products li a.info {
+  border-bottom: 1px solid black;
+}
