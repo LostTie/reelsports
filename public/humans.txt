@@ -1,0 +1,23 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Developer: Lost Tie LLC 
+  Site: http://www.losttie.com
+  Location: Corpus Christi, TX 
+
+  Project Manager: Jason Rylance
+  Site: http://www.losttie.com
+  Twitter: @ecnalyr
+  Location: Corpus Christi, TX
+
+  Theming: Andrew Foster
+  Site: http://www.losttie.com
+  Location: Corpus Christi, TX
+
+/* THANKS */
+  Spree Commerce for the platform that made this possible: http://www.spreecommerce.com
+
+/* SITE */
+  Software: Ruby on Rails, Spree Commerce, Devise
