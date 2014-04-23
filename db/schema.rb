@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203131238) do
+ActiveRecord::Schema.define(version: 20140423174356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -239,18 +239,20 @@ ActiveRecord::Schema.define(version: 20140203131238) do
 
   add_index "spree_orders", ["completed_at"], name: "index_spree_orders_on_completed_at", using: :btree
   add_index "spree_orders", ["number"], name: "index_spree_orders_on_number", using: :btree
+  add_index "spree_orders", ["user_id", "created_by_id"], name: "index_spree_orders_on_user_id_and_created_by_id", using: :btree
   add_index "spree_orders", ["user_id"], name: "index_spree_orders_on_user_id", using: :btree
 
   create_table "spree_payment_methods", force: true do |t|
     t.string   "type"
     t.string   "name"
     t.text     "description"
-    t.boolean  "active",      default: true
-    t.string   "environment", default: "development"
+    t.boolean  "active",       default: true
+    t.string   "environment",  default: "development"
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "display_on"
+    t.boolean  "auto_capture"
   end
 
   create_table "spree_payments", force: true do |t|
@@ -666,7 +668,7 @@ ActiveRecord::Schema.define(version: 20140203131238) do
 
   create_table "spree_variants", force: true do |t|
     t.string   "sku",                                     default: "",    null: false
-    t.decimal  "weight",          precision: 8, scale: 2
+    t.decimal  "weight",          precision: 8, scale: 2, default: 0.0
     t.decimal  "height",          precision: 8, scale: 2
     t.decimal  "width",           precision: 8, scale: 2
     t.decimal  "depth",           precision: 8, scale: 2
