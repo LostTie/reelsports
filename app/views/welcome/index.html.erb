@@ -1,0 +1,26 @@
+<% if @products.empty? %>
+  <%= t(:no_products_found) %>
+<% elsif params.key?(:keywords) %>
+  <h6 class="search-results-title"><%= t(:search_results, :keywords => h(params[:keywords])) %></h6>
+<% end %>
+
+<% if @products.any? %>
+<ul id="products" class="inline product-listing welcome-gallery" data-hook>
+  <% @products.each_with_index do |product, index| %>
+    <% if product %>
+      <div id="product_<%= product.id %>" class="block product" data-hook="products_list_item">
+        <div class="product-image">
+          <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</ul>
+<% end %>
+<h5>
+  Corpus Christi's Premier Fishing Apparel
+</h5>
+<br>
+<h5>
+  Choose anything you wish, we'll ship it anywhere in the United States.
+</h5>
