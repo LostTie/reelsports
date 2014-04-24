@@ -12,6 +12,7 @@ Spree.config do |config|
   config.site_name = 'Reel Sportswear'
   config.logo = 'store/logo.png'
   config.admin_interface_logo = 'store/logo.png'
+  config[:attachment_styles] =  "{\"mini\":\"48x48>\",\"small\":\"208x208>\",\"product\":\"500x500>\",\"large\":\"600x600>\",\"jumbo\":\"800x800>\"}"
 end
 
 Spree.user_class = "Spree::LegacyUser"
