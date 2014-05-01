@@ -159,3 +159,19 @@ hr {
 .errorExplanation {
   background: #a22929
 }
+
+#welcome-message {
+  text-align: center;
+  margin-top: 20px;
+  h1 {
+    font-weight: 400;
+    }
+}
+
+.welcome-price {
+  display: block;
+}
+
+.welcome-product {
+  text-align: center;
+}

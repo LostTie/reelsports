@@ -1,26 +1,29 @@
-<% if @products.empty? %>
-  <%= t(:no_products_found) %>
-<% elsif params.key?(:keywords) %>
-  <h6 class="search-results-title"><%= t(:search_results, :keywords => h(params[:keywords])) %></h6>
-<% end %>
+<div id="welcome-message">
+  <div class="container">
+    <h1>
+      <a href=''>Texas' Premier Fishing Apparel</a>
+    </h1>
+  </div>
+</div>
 
 <% if @products.any? %>
-<ul id="products" class="inline product-listing welcome-gallery" data-hook>
+<ul class='inline '>
+  <li class='welcome-product columns two'>
+  </li>
   <% @products.each_with_index do |product, index| %>
     <% if product %>
-      <div id="product_<%= product.id %>" class="block product" data-hook="products_list_item">
-        <div class="product-image">
-          <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
-        </div>
-      </div>
+        <li id="product_<%= product.id %>" class="welcome-product columns four <%= cycle("", "omega", :name => "classes") %>" itemscope itemtype="http://schema.org/Product">
+          <div class="product-image">
+            <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+          </div>
+          <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+          <span class="price selling welcome-price" itemprop="price"><%= display_price(product) %></span>
+        </li>
     <% end %>
   <% end %>
+  <li class='welcome-product columns two'>
+  </li>
 </ul>
+
 <% end %>
-<h5>
-  Corpus Christi's Premier Fishing Apparel
-</h5>
-<br>
-<h5>
-  Choose anything you wish, we'll ship it anywhere in the United States.
-</h5>
+
