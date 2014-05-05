@@ -12,6 +12,11 @@ Spree.config do |config|
   config.site_name = 'Reel Sportswear'
   config.logo = 'store/logo.png'
   config.admin_interface_logo = 'store/logo.png'
+  config.use_s3 = ENV['USE_S3']
+  config.s3_bucket = ENV['S3_BUCKET']
+  config.s3_access_key = ENV['S3_ACCESS_KEY']
+  config.s3_secret = ENV['S3_SECRET']
+  config.s3_protocol = ENV['S3_PROTOCOL']
   config[:attachment_styles] =  "{\"mini\":\"48x48>\",\"small\":\"208x208>\",\"product\":\"500x500>\",\"large\":\"600x600>\",\"jumbo\":\"800x800>\"}"
 end
 
