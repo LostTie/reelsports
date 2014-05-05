@@ -81,3 +81,6 @@ coverage
 # rvm config
 .ruby-gemset
 .ruby-version
+
+# c66 toolbelt
+.cloud66/*
