@@ -6,4 +6,10 @@ class WelcomeController < Spree::StoreController
     @searcher.current_currency = current_currency
     @products = @searcher.retrieve_products.sample(3)
   end
+
+  def about
+  end
+
+  def contact
+  end
 end
