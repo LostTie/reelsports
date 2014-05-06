@@ -1,0 +1,8 @@
+<h2><%= t('.contact_us') %></h2>
+<%= simple_form_for @contact, :url => '/contacts' do |f| %>
+  <%= f.input :name, label: false, placeholder: t('.name') if ContactUs.require_name %>
+  <%= f.input :email, label: false, placeholder: t('.email') %>
+  <%= f.input :subject, label: false, placeholder: t('.subject') if ContactUs.require_subject %>
+  <%= f.input :message, as: :text, label: false, placeholder: t('.message') %>
+  <%= f.button :submit, value: t('.submit'), alt: t('.submit'), id: 'contact_us_contact_submit', title: t('.submit') %>
+<% end %>

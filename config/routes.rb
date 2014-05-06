@@ -8,5 +8,4 @@ Reelsports::Application.routes.draw do
   mount Spree::Core::Engine, :at => '/store'
   root to: 'welcome#index'
   get 'about' => 'welcome#about'
-  get 'contact' => 'welcome#contact'
 end
