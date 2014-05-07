@@ -4,7 +4,7 @@ class WelcomeController < Spree::StoreController
     @searcher = Spree::Config.searcher_class.new(params)
     @searcher.current_user = try_spree_current_user
     @searcher.current_currency = current_currency
-    @products = @searcher.retrieve_products.sample(3)
+    @products = @searcher.retrieve_products.sample(4)
   end
 
   def about

@@ -11,21 +11,17 @@
 
 <% if @products.any? %>
 <ul class='inline '>
-  <li class='welcome-product columns two'>
-  </li>
   <% @products.each_with_index do |product, index| %>
     <% if product %>
         <li id="product_<%= product.id %>" class="welcome-product columns four <%= cycle("", "omega", :name => "classes") %>" itemscope itemtype="http://schema.org/Product">
           <div class="product-image">
-            <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+            <%= link_to product_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
           </div>
           <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
           <span class="price selling welcome-price" itemprop="price"><%= display_price(product) %></span>
         </li>
     <% end %>
   <% end %>
-  <li class='welcome-product columns two'>
-  </li>
 </ul>
 
 <% end %>
