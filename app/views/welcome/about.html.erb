@@ -23,10 +23,14 @@
 <h3>Reel Sportswear & CCA Texas</h3>
  
 <p>Reel Sportswear is dedicated to serving its local community and environment in conservation of marine resources and reduction of environmental impact. Our company firmly believes that by educating, conserving and promoting the present and future of our natural marine resources, we can preserve a sustainable future for the sport of fishing and the wildlife that we share our home with. Reel Sportswear has joined efforts with CCA Texas in hopes of forging a bond between our customers and our waterways. To help, Reel Sportswear donates 5% of gross sales to CCA Texas.
-Help Reel Sportswear and CCA Texas preserve and promote conservation of our marine resources by joining the CCA. For more information please visit www.ccatexas.org</p>
+Help Reel Sportswear and CCA Texas preserve and promote conservation of our marine resources by joining the CCA. For more information please visit <a href='http://www.ccatexas.org'>www.ccatexas.org</a>.</p>
 
 <div class='three columns'>
-  <p><%= image_tag '/assets/store/cca_logo.png' %></p>
+  <p>
+    <%= link_to 'http://www.ccatexas.org/' do %>
+      <%= image_tag '/assets/store/cca_logo.png' %>
+    <% end %>
+  </p>
 </div>
 <div class='seven columns' style='padding-top: 70px;'>
   <h4><%= link_to 'Join Now', 'http://www.ccamembership.org/' %></h4>
