@@ -1,0 +1,33 @@
+<div class='sixteen columns' id='welcome-foot'>
+  <div class='container'>
+    <div class='two columns'>
+      <h5>Shop Now</h5>
+      <%= link_to '/store' do %>
+        <%= image_tag '/assets/store/shop_now.png' %>
+      <% end %>
+    </div>
+    <div class='six columns'>
+      <h5>Payment Options</h5>
+      <%= image_tag '/assets/store/payment_types/visa.png', alt: 'Visa', title: 'Visa' %>
+      <%= image_tag '/assets/store/payment_types/mastercard.png', alt: 'MasterCard', title: 'MasterCard' %>
+      <%= image_tag '/assets/store/payment_types/discover.png', alt: 'Discover', title: 'Discover' %>
+      <%= image_tag '/assets/store/payment_types/amex.png', alt: 'American Express', title: 'American Express' %>
+
+    </div>
+    <div class='eight columns'>
+      <h5>Follow Us</h5>
+      <%= link_to 'https://www.facebook.com/ReelSportswear' do %>
+        <%= image_tag '/assets/store/social_media/facebook.png', alt: 'facebook', title: 'facebook' %>
+      <% end %>
+      <%= link_to 'http://instagram.com/ReelSportswear' do %>
+        <%= image_tag '/assets/store/social_media/instagram.png', alt: 'Instagram', title: 'Instagram' %>
+      <% end %>
+      <%= link_to 'https://twitter.com/reeltx' do %>
+        <%= image_tag '/assets/store/social_media/twitter.png', alt: 'Twitter', title: 'Twitter' %>
+      <% end %>
+      <%= link_to 'https://www.youtube.com/user/reelsportswear' do %>
+        <%= image_tag '/assets/store/social_media/youtube.png', alt: 'YouTube', title: 'YouTube' %>
+    <% end %>
+    </div>
+  </div>
+</div>

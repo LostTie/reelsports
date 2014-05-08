@@ -1,8 +1,37 @@
-<h2><%= t('.contact_us') %></h2>
-<%= simple_form_for @contact, :url => '/contacts' do |f| %>
-  <%= f.input :name, label: false, placeholder: t('.name') if ContactUs.require_name %>
-  <%= f.input :email, label: false, placeholder: t('.email') %>
-  <%= f.input :subject, label: false, placeholder: t('.subject') if ContactUs.require_subject %>
-  <%= f.input :message, as: :text, label: false, placeholder: t('.message') %>
-  <%= f.button :submit, value: t('.submit'), alt: t('.submit'), id: 'contact_us_contact_submit', title: t('.submit') %>
-<% end %>
+<div class='sixteen columns' id='contact-form'>
+  <h2><%= t('.contact_us') %></h2>
+  <%= simple_form_for @contact, :url => '/contacts' do |f| %>
+    <%= f.input :name, label: false, placeholder: t('.name') if ContactUs.require_name %>
+    <%= f.input :email, label: false, placeholder: t('.email') %>
+    <%= f.input :subject, label: false, placeholder: t('.subject') if ContactUs.require_subject %>
+    <%= f.input :message, as: :text, label: false, placeholder: t('.message') %>
+    <%= f.button :submit, value: t('.submit'), alt: t('.submit'), id: 'contact_us_contact_submit', title: t('.submit') %>
+  <% end %>
+</div>
+
+<hr>
+<div class='sixteen columns' id='social-media-large'>
+  <h2>Follow Us</h2>
+  <ul class=''>
+    <li class='four columns'>
+      <%= link_to 'https://www.facebook.com/ReelSportswear' do %>
+        <%= image_tag '/assets/store/social_media/facebook_large.png', alt: 'facebook', title: 'facebook' %>
+      <% end %>
+    </li>
+    <li class='four omega columns'>
+      <%= link_to 'http://instagram.com/ReelSportswear' do %>
+        <%= image_tag '/assets/store/social_media/instagram_large.png', alt: 'Instagram', title: 'Instagram' %>
+    <% end %>
+    </li>
+    <li class='four columns'>
+      <%= link_to 'https://twitter.com/reeltx' do %>
+        <%= image_tag '/assets/store/social_media/twitter_large.png', alt: 'Twitter', title: 'Twitter' %>
+      <% end %>
+    </li>
+    <li class='four omega columns'>
+      <%= link_to 'https://www.youtube.com/user/reelsportswear' do %>
+        <%= image_tag '/assets/store/social_media/youtube_large.png', alt: 'YouTube', title: 'YouTube' %>
+      <% end %>
+    </li>
+  </ul>
+</div>
