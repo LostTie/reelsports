@@ -1,0 +1,2 @@
+<!-- replace '#product-variants ul' -->
+<%= select_tag "products[#{@product.id}]",     options_for_select(@product.variants_and_option_values(current_currency).collect{|v| ["#{variant_options(v)}  #{variant_price(v)}", v.id]})%>

@@ -1,0 +1,2 @@
+<!-- replace '#product-variants .product-section-title' -->
+<h6 class="product-section-title"><%= Spree.t(:size) %></h6>
