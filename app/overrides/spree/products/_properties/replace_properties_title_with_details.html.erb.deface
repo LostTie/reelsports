@@ -1,0 +1,2 @@
+<!-- replace '.product-section-title' -->
+<h6 class="product-section-title"><%= Spree.t('details')%></h6>
