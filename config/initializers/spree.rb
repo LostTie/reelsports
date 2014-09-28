@@ -18,6 +18,7 @@ Spree.config do |config|
   config.s3_secret = ENV['S3_SECRET']
   config.s3_protocol = ENV['S3_PROTOCOL']
   config[:attachment_styles] =  "{\"mini\":\"48x48>\",\"small\":\"208x208>\",\"product\":\"500x500>\",\"large\":\"600x600>\",\"jumbo\":\"800x800>\"}"
+  config.products_per_page = 100
 end
 
 Spree.user_class = "Spree::LegacyUser"
