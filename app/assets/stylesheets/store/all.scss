@@ -99,7 +99,8 @@ table tbody tr.odd {
 }
 
 .pagination {
-  display: none;
+    position: absolute;
+    right: 50px;
 }
 
 #shipping_method {
@@ -199,3 +200,4 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
   border-top: 1px solid black;
   margin-top: 15px;
 }
+
